@@ -1,0 +1,317 @@
+/* Site Color Variables */
+:root {
+    --dark-blue: rgba(68,88,119,1);
+    --light-blue: rgba(146,204,206,1);
+    --dark-gray: rgba(49,52,61,1);
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Header Styling */
+header {
+    padding: 0 0 10px 0;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--dark-gray);
+    box-shadow: 0 5px 35px rgb(51, 89, 203);
+}
+    
+header h1 {
+    color: var(--dark-gray);
+    background-color: var(--light-blue);
+    font-size: 5vw;
+    width: 100%;
+}
+    
+    
+    
+/* Navbar Styling */
+nav {
+    justify-content: center;
+}
+      
+nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    color: var(--light-blue);
+    background-image: linear-gradient(270deg, var(--light-blue) 0%, var(--light-blue) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    transition: all 0.25s ease-in;
+    font-size: 4vw;
+}
+
+nav a:hover {
+    background-size: 100% 100%;
+    color: var(--dark-blue);
+}
+
+    /* Hero Image Styling */
+    .hero-image {
+        background: var(--dark-blue);
+        background-image: url("../images/heroimage.jpeg"), linear-gradient(90deg, var(--light-blue) 0%, var(--dark-gray) 100%);
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: soft-light;
+        min-height: 30vh;
+        color: var(--light-blue);
+        padding: 2% 6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding-left: 50px;
+    }
+    
+    .hero-image div {
+        flex: 0 0 90%;
+    }
+    
+    .hero-image h2 {
+        background-color: var(--light-blue);
+        color: var(--dark-gray);
+        margin: 0;
+        padding: 5px 10px;
+        font-size: 3vw;
+        line-height: 1.2;
+        display: inline;
+    }
+    .hero-image img {
+        width: 25vw;
+        border-radius: 10%;
+        opacity: 0.9;
+        position: relative;
+        top: 80px;
+    }
+
+    .hero-image img:hover{
+        box-shadow: var(--dark-gray);
+        opacity: 1;
+    }
+
+    .headshot {
+        align-items: center;
+        justify-content: center;
+        width: 35vw;
+    }
+/* Main Section Styling */
+
+main {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.main-wrapper {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section {
+    margin: 25px 0;
+    padding: 10px 15px 0 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.main-section > h2 {
+    flex: 0 0 100%;
+    border-right: none;
+    border-bottom: 4px solid var(--dark-blue);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 7vw;
+}
+
+.main-section > div {
+    flex: 0 0 100%;
+}
+
+
+.main-section p {
+    margin-bottom: 20px;
+    color: black;
+}
+
+
+/* Portfolio Grid Styling */
+.grid-box {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat (150px, 2fr);
+    grid-auto-rows: minmax(150px, 1fr);
+
+}
+
+.grid-item {
+    border: 5px solid var(--light-blue);
+    grid-column: 1 / -1;
+    background-color: var(--dark-blue);
+    color: var(--dark-gray);
+    min-height: 100px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.8rem;
+}
+
+.grid-item:first-child {
+    grid-column: 1 / -1;
+}
+
+.grid-item:hover {
+    background-color:rgb(118, 159, 222);
+}
+
+.grid-item div {
+    background-color: var(--light-blue);
+    padding: 8px 10px;
+}
+
+.grid-item h3 {
+    font-size: 1.4rem;
+}
+
+/* Contact Me Styling */
+.contact address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.contact address a {
+    color: var(--dark-gray);
+    padding: 5px;
+    text-decoration: none;
+    font-size: 3vw;
+    font-style: normal;
+    background-image: linear-gradient(270deg, var(--dark-blue) 0%, var(--dark-blue) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    transition: all 0.25s ease-in;
+    margin: 0 0.2rem 0.1rem;
+}
+
+.contact address a:hover {
+    background-size: 100% 88%;
+    color: var(--light-blue);
+}
+
+/* Footer Styling */
+footer  {
+    font-size: 1.0em;
+    text-align: center;
+    vertical-align: bottom;
+  }
+
+/* Tablet Media Query */
+
+@media screen and (min-width: 768px) {
+
+    .main-section > div {
+        flex: 0 0 75%;
+    }
+    
+    .main-section > h2 {
+        flex: 0 0 20%;
+        text-align: right;
+        padding-right: 15px;
+        border-right: 4px solid var(--dark-blue);
+        border-bottom: 0;
+        line-height: 1.1;
+        font-size: 3vw;
+    }
+    
+    .hero-image {
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+        padding-left: 10vw
+    }
+
+    .hero-image img {
+        padding-bottom: 10vw;
+    }
+    
+    .grid-item {
+        grid-column: span 4;
+    }
+    .grid-item:first-child {
+        grid-column: span 8;
+        grid-row: span 2;
+    }
+
+    .grid-box {
+        grid-auto-rows: minmax(200px, 1fr);
+    }
+
+    .contact address {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+       
+    }
+
+    .contact address a {
+        font-size: 2vw;
+    }
+
+/* Desktop Media Query */
+
+@media screen and (min-width: 960px) {
+        
+
+    header {
+        padding: 15px 6% 15px 0;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+        
+        header h1 {
+            padding: 5px 1% 5px 5%;
+            width: 30%;
+            font-size: 3vw;
+            line-height: 1;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        nav a{
+            font-size: 2vw;
+        }
+
+        nav a:last-child {
+            margin-right:0;
+        }
+
+    }
+
+
+}

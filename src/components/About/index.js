@@ -1,11 +1,12 @@
 import React from 'react';
+import headShot from '../../assets/headshot/headshot.png'
 
 function About () {
     return (
         <section className="my-5">
         <div className="my-2">
           <div className="profile-img my-5">
-          <i className="fas fa-user-circle" style={{ fontSize: "96px" }}></i>
+          <img src={headShot} alt="faith" style={{width: '200px'}}></img>
           </div>
           <p>Hello!
                 </p>
@@ -19,4 +20,4 @@ function About () {
     );
 }
 
-export default About;
+export default About
